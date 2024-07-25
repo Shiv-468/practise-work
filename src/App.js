@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import ApiTesk from './Components/ApiTesk';
+import Fome from './Components/Fome';
+import GmailTask from './Components/GmailTask';
+import Home from './pages/Home'
+import About from './pages/About'
+import Blog from './pages/Blog'
+import Contant from './pages/Contant'
+import Header from './pages/Header'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+         <ApiTesk />  
+      <GmailTask />
+      <Fome />    
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/contant' element={<Contant />} />
+      </Routes>
+
+    </>
   );
 }
 
