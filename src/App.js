@@ -9,13 +9,15 @@ import About from './pages/About'
 import Blog from './pages/Blog'
 import Contant from './pages/Contant'
 import Header from './pages/Header'
+import HeroLocation from './pages/HeroLocation';
 
 function App() {
   return (
     <>
-         <ApiTesk />  
+    <HeroLocation/>
+      <ApiTesk />
       <GmailTask />
-      <Fome />    
+      <Fome />
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
